@@ -334,3 +334,14 @@ footer .footerBottom .copy {
   font-weight: normal;
   margin-bottom: 0;
 }
+#successForm {
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+}
+#successForm p, #successForm h2 {
+    color: #03d603;
+}
+#successForm p {
+    margin-top: 15px;
+}
