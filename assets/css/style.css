@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: #000;
+  font-family: "Gilroy", Arial, sans-serif !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* For Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  padding-inline: calc(var(--gutter) + env(safe-area-inset-left, 0px));
+  padding-inline: calc(var(--gutter) + env(safe-area-inset-right, 0px));
+  margin-inline: auto;
+  width: 100%;
+  max-width: none;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1340px;
+  }
+}
+
+/* desktop */
+header {
+  box-shadow: 0 4px 16px rgba(0, 51, 153, 0.04), 0 2px 2px rgba(0, 51, 153, 0.08);
+}
+#headerTopContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+#headerTopContent p {
+  text-align: right;
+  line-height: 150%;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 100;
+}
+#headerTopContent div {
+  display: flex;
+  gap: 10px;
+}
+#headerTop a {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  gap: 10px;
+}
+#headerTop img {
+  max-height: 80px;
+}
+#headerTop a img {
+  margin-top: -15px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header nav a {
+  padding: 20px 20px;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+#navWrapper {
+  background-color: #1537fa;
+  margin-top: -15px;
+}
+header nav a:hover {
+  background: #213ddc;
+}
+
+/* form */
+#formWrapper {
+  padding-block: 50px;
+}
+#formTop {
+  text-align: center;
+}
+#formTop h1 {
+  font-size: 72px;
+  line-height: 76px;
+  color: #2b2f33;
+}
+#formTop p {
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: #707a8a;
+  margin-top: 16px;
+}
+#formBox {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 80px;
+}
+#formConTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#formConTop p {
+  font-size: 14px;
+  color: #707a8a;
+  text-wrap-mode: nowrap;
+}
+#formConTop div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#formConTop div:nth-of-type(3) {
+  flex-direction: row-reverse;
+}
+#stepTwo.active span {
+  background-color: rgb(3, 214, 3);
+  color: #fff;
+}
+#formLine {
+  position: relative;
+  width: 420px;
+  height: 0.5px;
+  background-color: #0001;
+}
+#formLine::after {
+  content: "";
+  width: 50%;
+  background-color: rgb(3, 214, 3);
+  z-index: 1;
+  height: 0.5px;
+  transition: all 0.3s ease-in-out;
+}
+#formLine.stepped::after {
+  width: 100%;
+}
+#formConTop span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #2221;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+#formConTop div:nth-of-type(1) span {
+  background-color: rgb(3, 214, 3);
+  color: #fff;
+}
+#formInputsBox {
+  display: flex;
+  flex-direction: column;
+}
+.formInputs {
+  margin-top: 30px;
+}
+.formInputs input {
+  padding: 12px 15px;
+  border: 1px solid #2221;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+}
+.formInputs input.error {
+  border-color: red;
+}
+#formInputsBox .button {
+  padding: 10px 30px;
+  background-color: rgb(3, 214, 3);
+  color: #fff;
+  margin: 25px auto;
+  cursor: pointer;
+}
+#formInputsTwo {
+  display: none;
+}
+#formInputsTwo input {
+  width: 100%;
+}
+#formInputsTwo textarea {
+  width: 100%;
+  resize: none;
+  height: 150px;
+  border: 1px solid #2221;
+  margin-top: 10px;
+  padding: 12px 15px;
+  border-radius: 4px;
+}
+.hidden {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+
+/* news */
+#newsWrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+}
+#newsWrapper a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #2223;
+  width: 32%;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+#newsWrapper a:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.articleTagsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#newsWrapper span {
+  font-size: 14px;
+}
+#newsWrapper a > span {
+  color: #5b606d;
+}
+#newsWrapper a h2 {
+  font-size: 18px;
+  color: #323849;
+}
+#newsWrapper a > p {
+  color: #323849;
+  font-size: 16px;
+}
+
+.articleTagsWrapper span {
+  background-color: #e7f2f9;
+  padding: 4px 11px;
+  width: fit-content;
+  color: #323849;
+  border-radius: 4px;
+}
+.clamp-3 {
+  display: -webkit-box; /* köhnə WebKit */
+  -webkit-box-orient: vertical; /* köhnə WebKit */
+  -webkit-line-clamp: 3; /* köhnə WebKit */
+  line-clamp: 3; /* yeni sintaksis (desteği olan brauzerlər) */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 140%;
+}
+
+/* footer */
+footer .socials {
+  padding: 0 15px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .socials a {
+  margin: 0 25px;
+}
+footer .footerBottom {
+  border-top: 1px solid #ededed;
+  padding: 16px 0;
+}
+footer .footerBottom .menuLinks {
+  display: flex;
+  margin-bottom: 12px;
+}
+footer .footerBottom .menuLinks a {
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  transition: 0.3s ease-out;
+}
+footer .footerBottom .menuLinks a:hover {
+  color: #000;
+}
+footer .footerBottom .copy {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: normal;
+  margin-bottom: 0;
+}
