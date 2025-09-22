@@ -33,6 +33,8 @@ input[type="number"] {
     padding-inline: calc(var(--gutter) + env(safe-area-inset-right, 0px));
     margin-inline: auto;
     width: 100%;
+    position: relative;
+    z-index: 2;
     max-width: none;
 }
 
@@ -129,6 +131,7 @@ header nav a:hover {
 /* form */
 #formWrapper {
     padding-block: 50px;
+    position: relative;
 }
 
 #formTop {
@@ -392,4 +395,14 @@ footer .footerBottom .copy {
 
 #successForm p {
     margin-top: 15px;
+}
+#bgLayer {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: .1;
 }
